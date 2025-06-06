@@ -1,0 +1,166 @@
+/* Main container styling */
+main {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: aliceblue;
+}
+
+/* Title at the top */
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Section divider */
+hr {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #b3c6e0;
+  margin: 28px 0 32px 0;
+  background: linear-gradient(90deg, #e3f0ff 0%, #7793bb 50%, #e3f0ff 100%);
+  height: 0;
+  opacity: 0.9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Subsection titles */
+.category-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Card container for responsive layout */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Individual card styling */
+.card {
+  width: 260px;
+  height: 360px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1.5px solid #e0e7ef;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* PG image */
+.card img {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background: #e3f0ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* PG name */
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0056b3;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+}
+
+/* PG description/short text */
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+  flex-grow: 1;
+}
+
+/* Owner name */
+.card .owner {
+  color: #007fff;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* View Details button */
+.card .details,
+.card a.details {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background: linear-gradient(90deg, #1a60ea 0%, #007fff 100%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+/* Hover effects for the button */
+.card .details:hover,
+.card a.details:hover {
+  background: linear-gradient(90deg, #7194ee 0%, #0056b3 100%);
+  color: #ffd700;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .card {
+    width: 45%;
+    min-width: 220px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    min-width: 180px;
+    height: auto;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .category-title {
+    font-size: 18px;
+  }
+}
