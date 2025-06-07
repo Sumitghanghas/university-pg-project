@@ -1,63 +1,77 @@
-// src/pages/Homepage.jsx
+// src/pages/AllPgs.jsx
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import useStore from "../store/Pgstore";
+import { useLocation, useNavigate } from "react-router-dom";
 import Card from "../components/Card";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import usePgStore from "../store/PgStore";
-import "./style/homepage.css";
+import "./style/Pghomepage.css"; 
 
-const Homepage = () => {
+
+const AllPgs = () => {
+  const { pgListings, fetchPgListings, isLoading, error } = useStore();
   const navigate = useNavigate();
-  const { pgListings, isLoading, error, fetchPgListings } = usePgStore();
- 
+  const location = useLocation();
+
+  const selectedCategory = location.state?.category || "All";
 
   useEffect(() => {
     fetchPgListings();
-  }, []);
+  }, [fetchPgListings]);
 
+  // Filter functions
   const girlsPG = pgListings.filter(pg => pg.type?.gender === "Girls");
   const boysPG = pgListings.filter(pg => pg.type?.gender === "Boys");
   const coedPG = pgListings.filter(pg => pg.type?.gender === "Coed");
 
+  // Handle filtered view if a specific category is selected
+  const sectionsToRender = selectedCategory === "All"
+    ? [
+        { title: "Girls PG", listings: girlsPG },
+        { title: "Boys PG", listings: boysPG },
+        { title: "Coed PG", listings: coedPG },
+      ]
+    : [
+        {
+          title: `${selectedCategory} PG`,
+          listings: pgListings.filter(pg => pg.type?.gender === selectedCategory),
+        },
+      ];
+
   return (
-    <>
-      <Navbar />
-      <main>
-        <h2 className="title">Available PGs</h2>
-        <hr />
-        {isLoading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
-        {!isLoading && !error && (
-          <>
-            {[{ title: "Girls PG", listings: girlsPG },
-              { title: "Boys PG", listings: boysPG },
-              { title: "Coed PG", listings: coedPG }
-            ].map(({ title, listings }, i) => (
-              <section key={i}>
-                <h3 className="category-title">{title}</h3>
-                <div className="card-container">
-                  {listings.length > 0 ? (
-                    listings.map(pg => (
-                      <Card
-                        key={pg._id}
-                        pg={pg}
-                        onClick={() => navigate(`/pg-details/${pg._id}`)}
-                      />
-                    ))
-                  ) : (
-                    <p>No {title.toLowerCase()} available.</p>
-                  )}
-                </div>
-                <hr />
-              </section>
-            ))}
-          </>
-        )}
-      </main>
-      <Footer />
-    </>
+    <main className="allpgs-main">
+      {/* <button className="homepage-button" onClick={() => navigate("/")}>
+        ← Home
+      </button> */}
+      <h3 className="category-title">
+        {selectedCategory === "All"
+          ? "All PG Listings"
+          : `All ${selectedCategory} PGs`}
+      </h3>
+
+      {isLoading && <p className="loading-text">Loading PGs...</p>}
+      {error && <p className="error-text">Error: {error}</p>}
+
+      {!isLoading && !error &&
+        sectionsToRender.map(({ title, listings }, i) => (
+          <section key={i}>
+            <h4 className="category-subtitle">{title}</h4>
+            <div className="card-container">
+              {listings.length > 0 ? (
+                listings.map(pg => (
+                  <Card
+                    key={pg._id}
+                    pg={pg}
+                    onClick={() => navigate(`/pg-details/${pg._id}`)}
+                  />
+                ))
+              ) : (
+                <p className="no-pgs-text">No {title.toLowerCase()} available.</p>
+              )}
+            </div>
+            <hr />
+          </section>
+        ))}
+    </main>
   );
 };
 
-export default Homepage;
+export default AllPgs;

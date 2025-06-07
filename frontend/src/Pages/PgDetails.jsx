@@ -4,15 +4,17 @@ import { useParams } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import usePgStore from "../store/PgStore";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import usePgStore from "../store/Pgstore.js";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
 import "./style/PgDetails.css";
+import { useNavigate } from "react-router-dom";
 
 function PGDetail() {
   const { id } = useParams();
 
   const pgId = id;
+  const navigate = useNavigate();
 
 
 
@@ -65,8 +67,10 @@ function PGDetail() {
 
   return (
     <>
-      <Navbar />
       <div className="pg-detail-container">
+         {/* <button className="homepage-button" onClick={() => navigate("/all-pgs")}>
+        ← Home
+      </button> */}
         {/* Images */}
         <div className="media-section">
           {pg.media?.images?.length > 0 ? (
@@ -191,7 +195,6 @@ function PGDetail() {
           },
         }}
       />
-      <Footer />
     </>
   );
 }

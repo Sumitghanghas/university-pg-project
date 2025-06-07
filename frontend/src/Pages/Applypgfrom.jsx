@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style/PgApplyForm.css";
-import usePgStore from "../store/PgStore";
+import usePgStore from "../store/Pgstore.js";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -171,7 +171,6 @@ export default function PgApplyForm() {
 
   return (
     <>
-    <Navbar />
     <div className="form-container">
       <form onSubmit={handleSubmit} className="pg-form" encType="multipart/form-data">
         <h2 className="form-title">PG Submission Form</h2>
@@ -517,7 +516,6 @@ export default function PgApplyForm() {
         </button>
       </form>
     </div>
-    <Footer />
     </>
   );
 }

@@ -1,0 +1,148 @@
+.intro { 
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 48px;
+  padding: 48px 0 48px 48px;
+
+  flex-wrap: wrap;
+}
+
+.content {
+  max-width: 700px;
+  flex: 1 1 350px;
+}
+
+.intropara {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.pink {
+  color: #e6007a;
+}
+
+.content h1 {
+  font-size: 70px;
+  font-weight: 900;
+  margin: 0 0 32px 0;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.famimg {
+  position: relative;
+  min-width: 350px;
+  max-width: 400px;
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.famimg img {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+  object-fit: cover;
+  display: block;
+  max-height: 400px;
+}
+
+.pg-options-cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.pg-card {
+  flex: 1 1 140px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 18px 10px 14px 10px;
+  text-align: left;
+  min-width: 140px;
+  max-width: 170px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.pg-card h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.pg-card.girls {
+  background: #ffe3f3;
+  border-left: 6px solid #e6007a;
+}
+.pg-card.boys {
+  background: #e3f0ff;
+  border-left: 6px solid #0056b3;
+}
+.pg-card.coed {
+  background: #e3ffe7;
+  border-left: 6px solid #00b36b;
+}
+
+.pg-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+@media (max-width: 1200px) {
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 12px;
+    gap: 32px;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .famimg {
+    min-width: 180px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 4vw;
+    gap: 18px;
+  }
+  .content {
+    max-width: 100%;
+  }
+  .content h1 {
+    font-size: 1.3rem;
+  }
+  .famimg {
+    min-width: 120px;
+    max-width: 100%;
+  }
+  .pg-options-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pg-card {
+    max-width: 100%;
+    min-width: 0;
+    padding: 14px 8px 10px 8px;
+  }
+}
+
+/* Hide image if screen is small */
+@media (max-width: 700px) {
+  .famimg {
+    display: none;
+  }
+}

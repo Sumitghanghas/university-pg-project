@@ -3,66 +3,70 @@
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, #003d80 0%, #0056b3 50%, #007fff 100%);
-  padding: 12px 32px;        
+  padding: 8px 20px;
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-  min-width: 320px;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
-.navbar-logo img {
-  height: 72px;
-  width: 65px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-.hostel-app-title {
-  font-weight: bold;
-  font-size: 28px;
-  letter-spacing: 2px;
-  color: #fffbe6;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.12);
-  position: relative;
-  top: -18px; 
-  left: 0;
-  display: inline-block;
-}
-.navbar-logo {
-  flex: 1;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-.navbar-logo a {
-  color: #fff;
-  font-size: 24px;
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.navbar-logo img {
+  height: 55px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.hostel-app-title {
   font-weight: bold;
-  text-decoration: none;
+  font-size: 20px;
   letter-spacing: 1px;
+  color: #fffbe6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  line-height: 1.2;
+  white-space: nowrap;
+  position: relative;
+  top: -17px; 
+  margin-left: 15px;
+
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 15px;
   margin: 0;
   padding: 0;
   justify-content: flex-end;
-  flex: 1;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .navbar-links li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   transition: color 0.2s;
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .navbar-links li a:hover,
 .navbar-links li a.active {
   background: #003d80;
-  color: #ffd700;
+  color: #ffd700;
 }
