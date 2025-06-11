@@ -1,3 +1,4 @@
+import "./style/card.css";
 const Card = ({ pg, onClick }) => (
   <div className="card" onClick={onClick}>
 <img src={`${import.meta.env.VITE_API_BASE_URL}/uploads/pgImages/${pg.media.images[0]}`} alt={pg.pgName} />

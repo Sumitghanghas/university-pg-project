@@ -68,7 +68,7 @@ function PGDetail() {
   return (
     <>
       <div className="pg-detail-container">
-         {/* <button className="homepage-button" onClick={() => navigate("/all-pgs")}>
+        {/* <button className="homepage-button" onClick={() => navigate("/all-pgs")}>
         ← Home
       </button> */}
         {/* Images */}
@@ -102,7 +102,6 @@ function PGDetail() {
         {/* Header */}
         <div className="pg-header">
           <h1>{pg.pgName}</h1>
-          <h3>Owner: {pg.ownerName}</h3>
         </div>
 
         {/* Description */}
@@ -171,6 +170,7 @@ function PGDetail() {
         <div className="pg-section">
           <h2>Contact</h2>
           <div className="contact-section">
+            <p>Owner: {pg.ownerName}</p>
             <p>📞 {pg.contactInfo?.phone}</p>
             <p>📱 Alt: {pg.contactInfo?.alternateContact || "Not Provided"}</p>
           </div>

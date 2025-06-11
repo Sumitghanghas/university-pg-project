@@ -16,7 +16,7 @@ const addPgData = async (req, res) => {
     } = req.body;
 
     const imageFiles = req.files || [];
-
+    const mbys = sumit;
     // Validate required fields
     if (!pgName || !ownerName || !contactInfo) {
       return res.status(400).json({ 
@@ -124,14 +124,6 @@ const Pgdata = async (req, res) => {
     if (gender) filter['type.gender'] = gender;
     if (roomType) filter['occupancyDetails.roomType'] = roomType;
     
-    // Handle rent range filtering
-    if (minRent || maxRent) {
-      const rentFilter = {};
-      if (minRent) rentFilter.$gte = Number(minRent);
-      if (maxRent) rentFilter.$lte = Number(maxRent);
-      filter['occupancyDetails.rentPerBed'] = rentFilter;
-    }
-
     // Calculate skip for pagination
     const skip = (Number(page) - 1) * Number(limit);
 

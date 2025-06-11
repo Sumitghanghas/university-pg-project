@@ -11,5 +11,4 @@ router.get("/pg/:id", PgdataById);
 // Route to add new PG data and image with id
 router.post("/add", upload.array("images", 10), addPgData);
 
-
 module.exports = router;

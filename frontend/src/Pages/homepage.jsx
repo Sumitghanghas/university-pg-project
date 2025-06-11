@@ -2,8 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./style/home.css";
 import famImg from "../assets/fam.png";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
 const Main = () => {
   const navigate = useNavigate();
