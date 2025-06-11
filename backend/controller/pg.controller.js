@@ -1,4 +1,4 @@
-const PgData = require('../models/pg'); // Adjust if needed
+const PgData = require('../models/PG'); // Adjust if needed
 
 // POST: Add PG Data
 const addPgData = async (req, res) => {
