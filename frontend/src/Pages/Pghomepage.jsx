@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import useStore from "../store/Pgstore";
 import { useLocation, useNavigate } from "react-router-dom";
-import Card from "../components/Card";
+import Card from "../components/card";
 import "./style/Pghomepage.css"; // Keep your original styles
 import OOPS from "../assets/OOPS.png"; // Adjust the path if needed
 
