@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./style/PgApplyForm.css";
 import usePgStore from "../store/Pgstore.js";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
 
 export default function PgApplyForm() {
   const { submitPgForm, isSubmitting } = usePgStore();

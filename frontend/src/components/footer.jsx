@@ -1,4 +1,4 @@
-import "./style/footer.css"; // Adjust the path if needed
+import "./style/footer.css";
 
 import React, { useState } from "react";
 
