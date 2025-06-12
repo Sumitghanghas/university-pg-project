@@ -16,7 +16,6 @@ const addPgData = async (req, res) => {
     } = req.body;
 
     const imageFiles = req.files || [];
-    const mbys = sumit;
     // Validate required fields
     if (!pgName || !ownerName || !contactInfo) {
       return res.status(400).json({ 

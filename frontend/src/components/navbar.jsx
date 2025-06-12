@@ -1,6 +1,7 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
-import "./style/navbar.css"; // Adjust the path if needed
+import "./style/navbar.css";
 import logo from "../assets/cblu_logo.png";
 
 const Navbar = () => (
@@ -11,9 +12,8 @@ const Navbar = () => (
           src={logo}
           alt="Logo"
         />
-        <span className="hostel-app-title">
-          CBLU Hostel Explorer
-        </span>
+        <span className="hostel-app-title full-title">CBLU Hostel Explorer</span>
+<span className="hostel-app-title short-title">Hostel Explorer</span>
       </Link>
     </div>
     <ul className="navbar-links">

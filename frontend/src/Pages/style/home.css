@@ -4,13 +4,23 @@
   justify-content: flex-start;
   gap: 48px;
   padding: 48px 0 48px 48px;
-
-  flex-wrap: wrap;
+  flex-wrap: nowrap; 
+}
+html, body {
+  overflow-x: hidden;
 }
 
+.intro,
+.content,
+.famimg,
+.pg-options-cards,
+.pg-card {
+  box-sizing: border-box;
+}
 .content {
   max-width: 700px;
   flex: 1 1 350px;
+  order: 1;
 }
 
 .intropara {
@@ -39,6 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  order: 2;
 }
 
 .famimg img {
@@ -47,7 +58,7 @@
   border-radius: 32px;
   object-fit: cover;
   display: block;
-  max-height: 400px;
+  max-height: 500px;
 }
 
 .pg-options-cards {
@@ -97,12 +108,6 @@
 }
 
 @media (max-width: 1200px) {
-  .intro {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 32px 12px;
-    gap: 32px;
-  }
   .content h1 {
     font-size: 2.5rem;
   }
@@ -113,12 +118,6 @@
 }
 
 @media (max-width: 900px) {
-  .intro {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 18px 4vw;
-    gap: 18px;
-  }
   .content {
     max-width: 100%;
   }
@@ -140,8 +139,14 @@
   }
 }
 
-/* Hide image if screen is small */
 @media (max-width: 700px) {
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 4vw;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
   .famimg {
     display: none;
   }

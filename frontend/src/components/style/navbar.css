@@ -33,14 +33,12 @@
   font-size: 20px;
   letter-spacing: 1px;
   color: #fffbe6;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   display: inline-block;
   line-height: 1.2;
   white-space: nowrap;
   position: relative;
-  top: -17px; 
-  margin-left: 15px;
-
+  top: -14px; 
+  left:10px;
 }
 
 .navbar-links {
@@ -69,4 +67,59 @@
 .navbar-links li a.active {
   background: #003d80;
   color: #ffd700;
+}
+
+.hostel-app-title.short-title {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .hostel-app-title {
+    display: none !important;
+  }
+  .hostel-app-title.short-title {
+    display: inline-block !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fffbe6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+    white-space: nowrap;
+    position: relative;
+    top: -8px;
+    margin-left: 0;
+    letter-spacing: 1px;
+  }
+  .navbar-logo {
+    gap: 6px;
+  }
+  .navbar-links {
+    gap: 8px;
+  }
+  .navbar-logo img {
+    height: 40px;
+    width: 36px;
+  }
+  .navbar {
+    padding: 8px 6px;
+  }
+  .navbar-links li a {
+    font-size: 13px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-logo img {
+    height: 32px;
+    width: 28px;
+  }
+  .hostel-app-title.short-title {
+    font-size: 1rem;
+    top: -5px;
+  }
+  .navbar-links li a {
+    font-size: 11px;
+    padding: 2px 4px;
+  }
 }
