@@ -4,8 +4,8 @@ import Homepage from "./Pages/Pghomepage";
 import PGDetails from "./Pages/PgDetails";
 import PgApplyForm from "./Pages/Applypgfrom"; // Uncomment if you want to use the apply form
 import Main from "./Pages/homepage";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 import "./App.css"; 
 
 
