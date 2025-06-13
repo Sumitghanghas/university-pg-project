@@ -1,6 +1,5 @@
-import "./style/footer.css";
-
 import React, { useState } from "react";
+import "./style/footer.css";
 
 const Footer = () => {
   const [showInitials, setShowInitials] = useState(false);
@@ -12,16 +11,15 @@ const Footer = () => {
   return (
     <footer className="footer" onClick={handleFooterClick} style={{ cursor: "pointer" }}>
       <p>
-        &copy; {new Date().getFullYear()} Hostel App. All rights reserved.
+        &copy; {new Date().getFullYear()} CBLU Hostel Explorer. All rights reserved.
         {showInitials && (
           <span className="footer-initials" style={{ marginLeft: "12px",color: "#555" }}>
-          ASARBSKNSP 
+          ASARKNBSPS 
           </span>
         )}
       </p>
     </footer>
   );
 };
-
 
 export default Footer;

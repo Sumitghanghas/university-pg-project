@@ -24,11 +24,37 @@
 }
 
 .category-title {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 2.7rem;
+  font-weight: 900;
   text-align: center;
-  margin: 100px 0 24px 0; 
+  margin: 60px 0 32px 0;
   padding: 0 10px;
+  color: #7c3aed;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  position: relative;
+  top: -5px;
+
+  background: linear-gradient(90deg, #d060f9 0%, #0683ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 700px) {
+  .category-title {
+    font-size: 2rem;
+    margin: 40px 10px 20px 10px;
+    top: -4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-title {
+    font-size: 1.3rem;
+    margin: 28px 6px 14px 6px;
+    top: -4px;
+  }
 }
 
 section {
@@ -42,6 +68,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   gap: 24px;
   padding: 20px;
   max-width: 1200px;
@@ -51,11 +78,11 @@ section {
 
 .card {
   width: 309.99px;
-  min-width: 200px;
+  min-width: 220px;
   max-width: 309.99px;
-  min-height: 380px; /* Updated height */
-  max-height: 380px; /* Updated height */
-  background: linear-gradient(135deg, #dbd3f4 60%, #e3f0ff 100%);
+  min-height: 300px;
+  max-height: 340px;
+  background: linear-gradient(135deg, #dbd3f4 60%, #e275ec 100%);
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(22, 22, 22, 0.13);
   padding: 14px 12px;
@@ -72,7 +99,7 @@ section {
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 20px rgba(249, 199, 145, 0.769);
-  background: linear-gradient(90deg, #93cdf3 0%, #d8a7f5 100%);
+   background: linear-gradient(90deg, #93cdf3 0%, #d8a7f5 100%);
 }
 
 .card img {
@@ -85,6 +112,7 @@ section {
   background: #e3f0ff;
   margin-bottom: 10px;
 }
+
 
 .card h3 {
   font-size: 18px;
@@ -112,27 +140,52 @@ section {
 }
 
 .card .details:hover {
-  background: linear-gradient(90deg, #d17fe4 0%, #c0d3e7 100%);
+  background: linear-gradient(90deg, #d85120 0%, #e7d3c0 100%);
   color: #0c0c0c;
   box-shadow: 0 4px 16px rgba(232, 171, 118, 0.711);
   transform: scale(1.05);
 }
-
 @media (max-width: 1000px) {
+  .card-container {
+    gap: 18px;
+  }
   .card {
     width: 45vw;
-    min-width: 180px;
+    min-width: 200px;
     max-width: 309.99px;
   }
 }
 
 @media (max-width: 768px) {
   .card-container {
-    gap: 16px;
-    padding: 16px;
+    gap: 14px;
+    padding: 12px;
   }
   .card {
-    max-width: 100%; 
+    width: 90vw;
+    min-width: 160px;
+    max-width: 98vw;
+    padding: 12px 8px;
+    margin: 8px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+  }
+  .card {
+    width: 98vw;
+    min-width: 120px;
+    max-width: 99vw;
+    margin: 8px auto;
+    padding: 10px 4px;
+  }
+  .card img {
+    height: 90px;
   }
 }
 
@@ -141,12 +194,10 @@ section {
     gap: 18px;
     padding: 18px;
   }
-  .card {
+   .card {
     width: 90vw;
     min-width: 140px;
     max-width: 309.99px;
-    min-height: 340px; /* Increased for better button visibility */
-    max-height: 340px;
     padding: 12px 10px;
   }
   .card img {
@@ -163,8 +214,9 @@ section {
     padding: 7px 16px;
   }
   .category-title {
-    font-size: 22px;
-    margin: 90px 15px 20px 15px;
+    font-size: 2rem;
+    margin: 40px 10px 20px 10px;
+    top: -4px;
   }
   .homepage-button {
     top: 100px;
@@ -173,11 +225,11 @@ section {
     padding: 7px 14px;
   }
 }
-
 @media (max-width: 480px) {
   .category-title {
-    font-size: 20px;
-    margin: 80px 10px 16px 10px;
+    font-size: 1.3rem;
+    margin: 28px 6px 14px 6px;
+    top: -4px;
   }
   .card h3 {
     font-size: 16px;
@@ -190,8 +242,6 @@ section {
     width: 98vw;
     min-width: 120px;
     max-width: 309.99px;
-    min-height: 320px; /* Increased */
-    max-height: 320px;
     padding: 10px 6px;
   }
   .card img {
@@ -200,6 +250,7 @@ section {
   .homepage-button {
     display: none !important;
   }
+  
 }
 
 .no-pgs-wrapper {
@@ -209,14 +260,12 @@ section {
   justify-content: center;
   width: 100%;
 }
-
 .no-pgs-img {
   width: 420px;
   max-width: 60vw;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   opacity: 0.8;
 }
-
 .no-pgs-text {
   font-size: 18px;
   color: #888;
