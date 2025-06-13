@@ -1,230 +1,382 @@
-/* pgDetail.css - Light Blue Theme with Elegant Animations */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+/* pgDetail.css - Light Blue Theme with Elegant Animations - Mobile Responsive */
 
 .pg-detail-container {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 30px;
-  background: linear-gradient(90deg, #d0f0fd, #a2d4f7);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  font-family: 'Poppins', sans-serif;
-  color: #2c3e50;
-  animation: fadeIn 1s ease-in-out;
-  overflow-x: hidden;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(90deg, #d0f0fd, #a2d4f7);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .pg-header {
-  text-align: center;
-  margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .pg-header h1 {
-  font-size: 3rem;
-  background: linear-gradient(to right, #00bcd4, #007bb5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  animation: pulse 2s infinite alternate;
+    font-size: 3rem;
+    background: linear-gradient(to right, #00bcd4, #007bb5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: pulse 2s infinite alternate;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.02);
-  }
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.02);
+    }
 }
 
 .pg-header h3 {
-  font-size: 1.2rem;
-  color: #0277bd;
-  margin-top: 5px;
+    font-size: 1.2rem;
+    color: #0277bd;
+    margin-top: 5px;
 }
 
 .media-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 .pg-image {
-  width: 300px;
-  max-width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    max-width: 100%;
 }
 
 .pg-image:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .pg-section {
-  margin-bottom: 35px;
-  padding: 25px;
-  border-radius: 15px;
-  background: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  border-left: 6px solid #00acc1;
-  animation: slideIn 1s ease forwards;
+    margin-bottom: 35px;
+    padding: 25px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #00acc1;
+    animation: slideIn 1s ease forwards;
 }
 
 @keyframes slideIn {
-  0% {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .pg-section h2 {
-  font-size: 1.8rem;
-  color: #01579b;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #00bcd4;
-  padding-bottom: 5px;
+    font-size: 1.8rem;
+    color: #01579b;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #00bcd4;
+    padding-bottom: 5px;
 }
 
 .pg-section p,
 .amenities-list span,
 .rules-section p,
 .contact-section p {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #37474f;
-  flex-wrap: wrap;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #37474f;
 }
 
 .amenities-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  color: #0277bd;
-  font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #0277bd;
+    font-weight: 700;
 }
 
 .occupancy-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
-  margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .occupancy-card {
-  background: linear-gradient(to top, #b3e5fc, #e1f5fe);
-  border-radius: 18px;
-  padding: 20px;
-  width: 280px;
-  max-width: 100%;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+    background: linear-gradient(to top, #b3e5fc, #e1f5fe);
+    border-radius: 18px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    flex: 1;
+    min-width: 250px;
 }
 
 .occupancy-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .occupancy-card h4 {
-  font-size: 1.4rem;
-  color: #01579b;
-  margin-bottom: 12px;
-  text-shadow: 1px 1px 2px #ffffffaa;
+    font-size: 1.4rem;
+    color: #01579b;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 2px #ffffffaa;
 }
 
 .occupancy-card p {
-  font-size: 1rem;
-  color: #0277bd;
-  text-shadow: 1px 1px 2px #ffffff88;
-  margin: 5px 0;
+    font-size: 1rem;
+    color: #0277bd;
+    text-shadow: 1px 1px 2px #ffffff88;
+    margin: 5px 0;
 }
 
 .rules-section p {
-  font-weight: 700;
-  color: #00838f;
+    font-weight: 700;
+    color: #00838f;
 }
 
 .contact-section p {
-  font-weight: bold;
-  color: #006064;
+    font-weight: bold;
+    color: #006064;
 }
 
 .carousel-wrapper {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto 30px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
+/* Enhanced Mobile Responsiveness */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .pg-detail-container {
+        margin: 20px;
+        padding: 25px;
+    }
+    
+    .pg-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .pg-image {
+        width: 280px;
+        height: 180px;
+    }
+    
+    .carousel-img {
+        height: 350px;
+    }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
-  .pg-detail-container {
-    padding: 15px;
-  }
+    .pg-detail-container {
+        margin: 15px;
+        padding: 20px;
+        border-radius: 15px;
+    }
 
-  .pg-image {
-    width: 100%;
-    height: auto;
-  }
+    .pg-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .pg-header h3 {
+        font-size: 1.1rem;
+    }
 
-  .pg-section {
-    padding: 15px;
-  }
+    .pg-image {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+    }
 
-  .pg-header h1 {
-    font-size: 2rem;
-  }
+    .pg-section {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .pg-section h2 {
+        font-size: 1.6rem;
+    }
 
-  .occupancy-card {
-    width: 100%;
-  }
+    .occupancy-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .carousel-img {
+        height: 300px;
+    }
+    
+    .amenities-list {
+        gap: 15px;
+    }
+    
+    .media-section {
+        gap: 12px;
+    }
+}
 
-  .carousel-img {
-    height: auto;
-  }
+/* Mobile phones */
+@media (max-width: 480px) {
+    .pg-detail-container {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .pg-header h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .pg-header h3 {
+        font-size: 1rem;
+    }
+
+    .pg-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .pg-section {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+    
+    .pg-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+    
+    .pg-section p,
+    .amenities-list span,
+    .rules-section p,
+    .contact-section p {
+        font-size: 0.95rem;
+        gap: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .occupancy-card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+    
+    .occupancy-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .occupancy-card p {
+        font-size: 0.9rem;
+    }
+    
+    .carousel-img {
+        height: 220px;
+    }
+    
+    .carousel-wrapper {
+        max-width: 95%;
+        border-radius: 8px;
+    }
+    
+    .amenities-list {
+        gap: 10px;
+        flex-direction: column;
+    }
+    
+    .amenities-list span {
+        width: 100%;
+    }
+    
+    .media-section {
+        gap: 10px;
+    }
+    
+    .occupancy-cards-container {
+        gap: 15px;
+    }
+    
+    /* Disable hover effects on mobile */
+    .pg-image:hover,
+    .occupancy-card:hover {
+        transform: none;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+    .pg-detail-container {
+        margin: 5px;
+        padding: 12px;
+    }
+    
+    .pg-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .pg-section {
+        padding: 12px;
+    }
+    
+    .pg-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-img {
+        height: 200px;
+    }
+    
+    .occupancy-card {
+        padding: 12px;
+    }
 }
