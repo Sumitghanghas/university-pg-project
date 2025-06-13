@@ -1,3 +1,9 @@
+/* GLOBAL FIX */
+* {
+  box-sizing: border-box;
+}
+
+/* Homepage Button */
 .homepage-button {
   position: fixed;
   top: 120px;
@@ -12,6 +18,7 @@
   font-size: 16px;
 }
 
+/* Responsive Homepage Button */
 @media (max-width: 480px) {
   .homepage-button {
     top: auto;
@@ -20,9 +27,11 @@
     transform: translateX(-50%);
     font-size: 14px;
     padding: 6px 12px;
+    display: none !important;
   }
 }
 
+/* Category Title */
 .category-title {
   font-size: 2.7rem;
   font-weight: 900;
@@ -57,13 +66,14 @@
   }
 }
 
+/* Section Wrapper */
 section {
   padding: 20px;
   margin: 0 auto;
   max-width: 1200px;
-  box-sizing: border-box;
 }
 
+/* Card Container */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -73,9 +83,9 @@ section {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
+/* Card Style */
 .card {
   width: 309.99px;
   min-width: 220px;
@@ -92,27 +102,23 @@ section {
   align-items: center;
   transition: transform 0.3s ease;
   border: 1.5px solid #e0e7ef;
-  box-sizing: border-box;
   margin: 10px;
 }
 
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 20px rgba(249, 199, 145, 0.769);
-   background: linear-gradient(90deg, #93cdf3 0%, #d8a7f5 100%);
+  background: linear-gradient(90deg, #93cdf3 0%, #d8a7f5 100%);
 }
 
 .card img {
   width: 100%;
   height: 160px;
-  min-height: 160px;
-  max-height: 250px;
   object-fit: cover;
   border-radius: 12px;
   background: #e3f0ff;
   margin-bottom: 10px;
 }
-
 
 .card h3 {
   font-size: 18px;
@@ -145,14 +151,16 @@ section {
   box-shadow: 0 4px 16px rgba(232, 171, 118, 0.711);
   transform: scale(1.05);
 }
+
+/* Tablet Responsive */
 @media (max-width: 1000px) {
   .card-container {
     gap: 18px;
   }
+
   .card {
     width: 45vw;
     min-width: 200px;
-    max-width: 309.99px;
   }
 }
 
@@ -161,98 +169,50 @@ section {
     gap: 14px;
     padding: 12px;
   }
+
   .card {
     width: 90vw;
-    min-width: 160px;
     max-width: 98vw;
     padding: 12px 8px;
     margin: 8px auto;
   }
 }
 
-@media (max-width: 600px) {
+/* ✅ Mobile View – Centered Cards */
+@media (max-width: 480px) {
   .card-container {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 8px;
+    padding: 10px;
   }
-  .card {
-    width: 98vw;
-    min-width: 120px;
-    max-width: 99vw;
-    margin: 8px auto;
-    padding: 10px 4px;
-  }
-  .card img {
-    height: 90px;
-  }
-}
 
-@media (max-width: 700px) {
-  .card-container {
-    gap: 18px;
-    padding: 18px;
+  .card {
+    width: 95%;
+    max-width: 360px;
+    min-width: 220px;
+    margin: 8px auto;
+    padding: 10px;
   }
-   .card {
-    width: 90vw;
-    min-width: 140px;
-    max-width: 309.99px;
-    padding: 12px 10px;
-  }
+
   .card img {
-    height: 110px;
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
   }
-  .card h3 {
-    font-size: 17px;
-  }
-  .card .owner {
-    font-size: 13px;
-  }
-  .card .details {
-    font-size: 14px;
-    padding: 7px 16px;
-  }
-  .category-title {
-    font-size: 2rem;
-    margin: 40px 10px 20px 10px;
-    top: -4px;
-  }
-  .homepage-button {
-    top: 100px;
-    left: 15px;
-    font-size: 15px;
-    padding: 7px 14px;
-  }
-}
-@media (max-width: 480px) {
-  .category-title {
-    font-size: 1.3rem;
-    margin: 28px 6px 14px 6px;
-    top: -4px;
-  }
+
   .card h3 {
     font-size: 16px;
   }
+
   .card .details {
     font-size: 14px;
     padding: 6px 12px;
   }
-  .card {
-    width: 98vw;
-    min-width: 120px;
-    max-width: 309.99px;
-    padding: 10px 6px;
-  }
-  .card img {
-    height: 90px;
-  }
-  .homepage-button {
-    display: none !important;
-  }
-  
 }
 
+/* No PG Image */
 .no-pgs-wrapper {
   display: flex;
   flex-direction: column;
@@ -260,12 +220,14 @@ section {
   justify-content: center;
   width: 100%;
 }
+
 .no-pgs-img {
   width: 420px;
   max-width: 60vw;
   margin-bottom: 10px;
   opacity: 0.8;
 }
+
 .no-pgs-text {
   font-size: 18px;
   color: #888;
